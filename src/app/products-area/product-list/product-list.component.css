@@ -1,0 +1,11 @@
+div {
+    padding-top: 20px;
+    overflow: auto;
+    height: 90%;
+}
+
+.new-product {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+}

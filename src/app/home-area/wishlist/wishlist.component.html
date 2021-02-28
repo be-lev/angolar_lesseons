@@ -1,0 +1,12 @@
+<div class="box">
+
+    <!-- Interpolation: -->
+    <p>My Wishlist: {{items.toString()}}</p>
+
+    <!-- Property Binding, Two-Way Binding (Banana in a Box) -->
+    <input type="text" [placeholder]="hint" [(ngModel)]="newItem">
+
+    <!-- Event Binding: -->
+    <button (click)="addItem($event)">➕</button>
+
+</div>

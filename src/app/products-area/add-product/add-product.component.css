@@ -1,0 +1,21 @@
+div {
+    text-align: left;
+}
+
+input, button {
+    width: 250px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 150px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.image-button {
+    background-color: white;
+    text-align: left;
+}

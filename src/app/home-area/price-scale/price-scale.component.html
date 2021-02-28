@@ -1,0 +1,11 @@
+<div class="box">
+
+    <label>Select Price Range: </label>
+
+    <span>{{priceRange.min}}</span>
+    <input #priceRange type="range" min="0" max="1000" [(ngModel)]="price">
+    <span>{{priceRange.max}} | </span>
+
+    <span>{{price | currency:"ILS"}}</span>
+
+</div>

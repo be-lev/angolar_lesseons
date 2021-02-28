@@ -1,0 +1,18 @@
+<div class="box">
+
+    <p>
+
+        <!-- Attribute Directive: -->
+        <span [ngStyle]="dynamicStyling">Sales:</span>
+
+        <!-- Structural Directive: -->
+        <span *ngIf="isWeekend()">Pizza | </span>
+        <span *ngIf="!isWeekend()">Pasta | </span>
+
+        <span *ngFor="let d of desserts; let i = index">{{i + 1}} - {{d}} | </span>
+
+        <span *ngFor="let f of fruits">{{f.name}} (${{f.price}}) | </span>
+
+    </p>
+
+</div>

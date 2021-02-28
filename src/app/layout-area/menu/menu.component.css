@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    margin-top: 20px;
+}
+
+.active {
+    color: green;
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+.box {
+    width: 300px;
+    padding-right: 0;
+    display: inline-flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, lightgreen, white);
+}
+
+.box > div {
+    display: inline-block;
+    text-align: left;
+    align-items: flex-start;
+}
+
+span {
+    width: 230px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+a {
+    margin-left: auto;
+}

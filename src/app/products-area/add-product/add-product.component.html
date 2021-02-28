@@ -1,0 +1,30 @@
+<div class="box">
+
+    <form (submit)="addProduct()">
+
+        <label>Name: </label><br>
+        <input type="text" name="name" [(ngModel)]="product.name">
+        <br><br>
+
+        <label>Price: </label><br>
+        <input type="number" name="price" [(ngModel)]="product.price">
+        <br><br>
+
+        <label>Stock: </label><br>
+        <input type="number" name="stock" [(ngModel)]="product.stock">
+        <br><br>
+
+        <input #imageBox type="file" accept="image/*" name="image" (change)="handleImage($event)">
+        <button class="image-button" type="button" (click)="imageBox.click()">Select Image</button>
+        <br><br>
+
+        <ng-container *ngIf="preview">
+            <img [src]="preview">
+            <br><br>
+        </ng-container>
+
+        <button>Add</button>
+
+    </form>
+
+</div>
