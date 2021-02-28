@@ -19,3 +19,18 @@ input[type="file"] {
     background-color: white;
     text-align: left;
 }
+
+span{
+    color: red;
+    position: absolute;
+    margin: 0 20px;
+}
+
+.ng-invalid:not(form){
+border: 2px solid rgb(255, 3, 213);
+background-color: red;
+}
+
+.ng-touched:not(form){
+    background-color: green;
+}

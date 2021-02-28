@@ -1,3 +1,4 @@
+import { ContactUsModel } from './models/contact-us.model';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
@@ -7,6 +8,9 @@ import { Title } from '@angular/platform-browser';
     styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
+
+    public contactUs = new ContactUsModel();
+
 
     public constructor(private myTitle: Title) { }
 

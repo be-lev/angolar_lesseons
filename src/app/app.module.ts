@@ -22,6 +22,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProductCardComponent } from './products-area/product-card/product-card.component';
 import { ProductDetailsComponent } from './products-area/product-details/product-details.component';
 import { AddProductComponent } from './products-area/add-product/add-product.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatIconModule} from "@angular/material/icon"
 
 @NgModule({
     declarations: [
@@ -48,7 +52,11 @@ import { AddProductComponent } from './products-area/add-product/add-product.com
         BrowserModule,
         AppRoutingModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatInputModule,
+        MatButtonModule,
+        BrowserAnimationsModule,
+        MatIconModule
     ],
     exports: [],
     // providers: [ColorsService], // הגדרה שאובייקט השירות הזה נגיש לכל הרכיבים בכל האתר

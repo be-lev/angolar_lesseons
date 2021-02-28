@@ -1,7 +1,30 @@
-<div>
+<div class="box">
+  <h3><mat-icon>contact_page</mat-icon>Contact Us</h3>
 
-    <p>Northwind Address: Homa Umigdal 29, Tel Aviv, Israel</p>
-    <p>Northwind Email: contact@northwind.com</p>
-    <p>Northwind Phone: +972 3 8373654</p>
+  <form #formInfo="ngForm">
+    <mat-form-field appearance="outline">
 
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" [(ngModel)]="contactUs.name" #nameInfo="ngModel" required/>
+      <mat-error *ngIf="nameInfo.invalid && nameInfo.touched">Missing Name</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <input matInput type="text" name="message" />
+    </mat-form-field>
+    <br />
+
+    <button mat-stroked-button><mat-icon>send</mat-icon>Send</button>
+    <button mat-stroked-button><mat-icon>cancel</mat-icon>Cancel</button>
+  </form>
 </div>

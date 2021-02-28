@@ -1,17 +1,21 @@
 <div class="box">
 
-    <form (submit)="addProduct()">
+    <form #formInfo="ngForm" (submit)="addProduct()">
 
         <label>Name: </label><br>
-        <input type="text" name="name" [(ngModel)]="product.name">
+        <input type="text" name="name" [(ngModel)]="product.name" required pattern="^[A-Z].*$" #nameInfo="ngModel">
+        <span *ngIf="nameInfo.errors?.required && nameInfo.touched">Missing Name </span>
+        <span *ngIf="nameInfo.errors?.pattern ">Name must start with capital </span>
         <br><br>
 
         <label>Price: </label><br>
-        <input type="number" name="price" [(ngModel)]="product.price">
+        <input type="number" name="price" [(ngModel)]="product.price" required #priceInfo="ngModel">
+        <span *ngIf="priceInfo.invalid && priceInfo.touched">Missing Price </span>
         <br><br>
 
         <label>Stock: </label><br>
-        <input type="number" name="stock" [(ngModel)]="product.stock">
+        <input type="number" name="stock" [(ngModel)]="product.stock" required #stockInfo="ngModel">
+        <span *ngIf="stockInfo.invalid && stockInfo.touched">Missing stock</span>
         <br><br>
 
         <input #imageBox type="file" accept="image/*" name="image" (change)="handleImage($event)">
@@ -23,7 +27,7 @@
             <br><br>
         </ng-container>
 
-        <button>Add</button>
+        <button [disabled]="formInfo.form.invalid">Add</button>
 
     </form>
 
