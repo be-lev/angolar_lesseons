@@ -1,7 +1,7 @@
 <div class="box">
 
     <p>
-        {{amount | currency:"ILS"}} gift-card on {{time | date:"MMMM yyyy"}} when buying {{minItems}} items!
+        {{amount | currency:"ILS"}} gift-card on {{time | date:"MMMM yyyy"}} when buying {{minItems | numToWord:true}} items!
     </p>
 
 </div>

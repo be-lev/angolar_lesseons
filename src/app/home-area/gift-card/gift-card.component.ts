@@ -11,6 +11,6 @@ export class GiftCardComponent {
 
     public amount = 50;
     public time = new Date();
-    public minItems = 5;
+    public minItems = 15;
 
 }
